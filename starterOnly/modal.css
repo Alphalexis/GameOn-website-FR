@@ -68,6 +68,8 @@ img {
   display: none;
 }
 
+/*move @media bottom ?*/
+
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.icon {
@@ -97,7 +99,7 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: -15px;  /* 0px */
   }
 } 
 
@@ -405,7 +407,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  min-height: 93vh; /*For a correct display, not exceed 75vh*/
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -495,11 +497,11 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 4.5rem; /*2.5rem*/
     white-space: normal;
   }
   .hero-text {
-    width: unset;
+    width: unset; /* 90% */
     font-size: 1.5rem;
   }
   .hero-img img {

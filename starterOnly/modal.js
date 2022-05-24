@@ -20,4 +20,21 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
+/* You display as "none" for the parent of parent of the close button,
+which is "bground" */
+const close = document.querySelector("span.close");
+	close.addEventListener("click", function() {
+    this.parentElement.parentElement.style.display = 'none';
+	});
 
+
+  const empty = document.getElementById("first");
+  empty.setAttribute("required", "required");
+
+
+  const empty2 = document.getElementById("last");
+  empty2.setAttribute("required", "required");
+
+
+  const min = document.getElementById("last");
+  empty2.setAttribute("minlength", "2");
