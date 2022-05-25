@@ -38,3 +38,7 @@ const close = document.querySelector("span.close");
 
   const min = document.getElementById("last");
   empty2.setAttribute("minlength", "2");
+
+  function checked() {
+    var check = document.querySelector("label.checkbox2-label").required;
+}
