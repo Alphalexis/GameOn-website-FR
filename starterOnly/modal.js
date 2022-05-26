@@ -11,6 +11,11 @@ function editNav() {
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
+const close = document.querySelector("span.close");
+const firstName = document.getElementById("first");
+const lastName = document.getElementById("last");
+const birthdate = document.getElementById("birthdate");
+const checkboxInput = document.getElementById("checkbox1");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -22,23 +27,28 @@ function launchModal() {
 
 /* You display as "none" for the parent of parent of the close button,
 which is "bground" */
-const close = document.querySelector("span.close");
+
 	close.addEventListener("click", function() {
     this.parentElement.parentElement.style.display = 'none';
 	});
 
+  /* You set as an attribute "required" with the "required" parametre to the
+  Id requested, so that the form would be mandatory */
 
-  const empty = document.getElementById("first");
-  empty.setAttribute("required", "required");
-
-
-  const empty2 = document.getElementById("last");
-  empty2.setAttribute("required", "required");
+  firstName.setAttribute("required", "required");
 
 
-  const min = document.getElementById("last");
-  empty2.setAttribute("minlength", "2");
+  lastName.setAttribute("required", "required");
 
-  function checked() {
-    var check = document.querySelector("label.checkbox2-label").required;
-}
+
+  birthdate.setAttribute("required", "required");
+
+  /* You set as an attribute "minlength" with "2" as a parametre to the
+  Id requested, so that the form would require minimum two caracters to be functional */
+
+  lastName.setAttribute("minlength", "2");
+  
+
+
+  
+
