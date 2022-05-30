@@ -60,10 +60,11 @@
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
+              onsubmit="return validate(event);"
+              novalidate
             >
               <div
-                class="formData">
+                class="formData" data-error-visible="false">
                 <label for="first">Prénom</label><br>
                 <input
                   class="text-control"
@@ -209,6 +210,17 @@
           </div>
         </div>
       </div>
+
+      <div class="confirm-modal">
+        <div class="modal-body">
+          <div class="content">
+            <span class="confirm-modal-close close"></span>
+            <p class="confirm-modal-message">Merci ! Votre réservation a été reçue.</p>
+            <button class="confirm-modal-btn">Fermer</button>
+          </div>
+        </div>
+      </div>
+
     </main>
     <footer>
       <p class="copyrights">
