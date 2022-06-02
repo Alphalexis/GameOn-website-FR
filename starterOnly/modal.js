@@ -58,7 +58,6 @@ close.addEventListener("click", function() {
 });
 
 
-/*formData.setAttribute("data-error-visible=","false");*/
 
   /* We first create an invalid alert*/
   function isInvalid(element, message) {
@@ -111,13 +110,13 @@ function lastValidation() {
 	else return false;
 }
 
-//check if email use valid formatting
+/* this code checks if the email used is valid and was formated correctly (the appropriate characters)*/
 function emailValidation() {
 	let regex = /^\S+@\S+\.\S+$/;
 	return regex.test(emailInput.value);
 }
 
-//check if birthdate is valid and older than today
+/*this code is there to check if the birthdate given and is older than the current day */
 function birthdateValidation() {
 	let birthdate = new Date(birthdateInput.value);
 	let today = new Date();
@@ -136,13 +135,13 @@ function birthdateValidation() {
 	}
 }
 
-// check if quantity is a valid number
+/*the code chacks if the quantity given is a number */
 function quantityValidation() {
 	let regex = /^[0-9]+$/;
 	return regex.test(quantityInput.value);
 }
 
-// check if user chose a location
+/* this code is so a location is selected */
 function locationValidation() {
 	for (let radio of locationInput) {
 		if (radio.checked === true) return true;
@@ -150,11 +149,12 @@ function locationValidation() {
 	return false;
 }
 
-//check if cgu are checked
+/* this checks if the general condition checkbox has been properly checked */
 function checkboxValidation() {
 	return checkboxInput.checked;
 }
 
+/* this code is there to test the form and to send or not the error messages written up-top this code */
 
 function validate(event) {
 	event.preventDefault();

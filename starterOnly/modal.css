@@ -107,14 +107,22 @@ img {
 
 
 @media screen and (max-width: 540px) {
+  .header-logo img {
+    margin-top: 12px;
+    margin-left: 15px;
+    width: 50%;
+  }
+
+
   .topnav a {
     display: none;
+    color: #fe142f;
   }
 
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: 0px;
     /* 0px */
   }
 }
@@ -459,7 +467,7 @@ input[data-error]::after {
 }
 
 .hero-section {
-  min-height: 93vh;
+  min-height: 75vh;
   /*For a correct display, not exceed 75vh*/
   border-radius: 10px;
   display: grid;
@@ -566,13 +574,13 @@ footer {
   }
 
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     /*2.5rem*/
     white-space: normal;
   }
 
   .hero-text {
-    width: unset;
+    width: 90%;
     /* 90% */
     font-size: 1.5rem;
   }
