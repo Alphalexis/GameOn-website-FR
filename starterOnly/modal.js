@@ -68,7 +68,7 @@ close.addEventListener("click", function() {
     target.setAttribute("data-error", message);
   }
   
-  /* same thing for the valid alert */
+  /* this code shows the validation screen when the form is properly filled*/
   function isValid() {
     modalbg.style.display = "none";
     confirmModal.style.display = "flex";
